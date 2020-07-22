@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from thiccalts.net/support/create by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Nov 2019 19:53:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Buy high quality Minecraft alt accounts at cheap prices.">
+<meta name="author" content="Cameron Wolfe <cameron@voxlus.com">
+<script src="../cdn-cgi/apps/head/5JrpeFPeqMhWY9taRyGjMqsidnc.js"></script><link rel="icon" href="#" type="image/png">
+<title>ThiccAlts 🍑</title>
+<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/css/animate.css">
+<link rel="stylesheet" href="../assets/css/hover.css">
+<link rel="stylesheet" href="../assets/css/stylea139.css?v=0.01">
+<link rel="stylesheet" href="../../use.fontawesome.com/releases/v5.6.1/css/all.css">
+<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+</head>
+<body>
+<div class="header header-content">
+<div class="container">
+<div class="animated pulse slower infinite">
+<a href="../index.html">
+<img src="../../media.discordapp.net/attachments/497538929608622093/522595280361881612/New_Logo_Fixed.png">
+</a>
+</div>
+<p>
+<a href="../faq.html" class="header-button main">Frequently Asked Questions</a>
+<a href="../support.html" class="header-button">Support</a>
+</p>
+</div>
+</div> <div class="section-small container">
+<div class="card">
+<div class="card-body">
+<div>
+<p>Enter order information</p>
+<div class="form-group">
+<input id="orderid" type="text" class="form-control" placeholder="Order ID" value="">
+</div>
+<div class="form-group">
+<input id="subject" type="text" class="form-control" placeholder="Ticket Subject">
+</div>
+<div style="margin-top:15px;">
+<button onclick="if (!window.__cfRLUnblockHandlers) return false; submit()" class="btn btn-primary btn-block btn-flat" data-cf-modified-5568344c1219a5bbfc9c4d1d-="">Create new Ticket</button>
+</div>
+<small>
+Notice: when you create a ticket, the email you paid with will receive notifications regarding your ticket.
+</small>
+<script type="5568344c1219a5bbfc9c4d1d-text/javascript">
+                    function submit() {
+                        $('#btn').css('visibility', 'hidden');
+                        if ($('#orderid').val() === "" || $('#subject').val() === "") {
+                            swal('Hold up!', 'You gotta fill all blanks silly!', 'error');
+                            return;
+                        }
+
+                        swal({
+                            html: "We sent ticket notifications to the email that you paid with, for security and ease-of-access reasons.",
+                            type: "info"
+                        }).then(function (result) {
+                            $.post("/admin/process/ticket/submit", {
+                                orderId: $('#orderid').val(),
+                                subject: $('#subject').val()
+                            }, function (result) {
+                                console.log(result);
+
+                                result = JSON.parse(result);
+                                if (result.success) {
+                                    swal('Notice', 'Please remember to check your spam folder when ordering something. Our emails may or may not be sent to spam!', 'info');
+                                    setTimeout(function () {
+                                        location.href = '/support/ticket/' + result.result
+                                    }, 1000);
+                                }
+
+                                else {
+                                    swal('An error has occurred', result.result, 'error')
+                                }
+
+                            });
+                        });
+                        $('#btn').css('visibility', 'visible');
+                    }
+                </script>
+</div>
+</div>
+</div>
+<footer class="footer text-center" style="padding-top: 75px;padding-bottom: 25px;">
+<div class="container">
+<span class="text-muted">Copyright &copy; 2018-2019 Lex Holdings Group, LLC. All rights reserved.<br><a href="../tos.html">TOS</a> | <a href="../refund.html">Refund</a> | <a href="../contact.html">Contact Us</a> | <a href="../about.html">About Us</a></span>
+</div>
+</footer>
+<script src="../assets/js/jquery.min.js" type="5568344c1219a5bbfc9c4d1d-text/javascript"></script>
+<script src="../assets/js/bootstrap.min.js" type="5568344c1219a5bbfc9c4d1d-text/javascript"></script>
+<script src="../adminpanel/assets/vendor/sweetalert/sweetalert.min.js" type="5568344c1219a5bbfc9c4d1d-text/javascript"></script>
+<script src="../../cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js" type="5568344c1219a5bbfc9c4d1d-text/javascript"></script>
+<script src="../../ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="5568344c1219a5bbfc9c4d1d-|49" defer=""></script></body>
+
+<!-- Mirrored from thiccalts.net/support/create by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Nov 2019 19:53:24 GMT -->
+</html>
